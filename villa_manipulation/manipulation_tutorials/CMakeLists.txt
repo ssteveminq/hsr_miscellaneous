@@ -56,6 +56,8 @@ add_executable(omni_message src/omni_message.cpp)
 add_executable(omni_message_velocity src/omni_message_velocity.cpp)
 add_executable(omni_actionlib src/omni_actionlib.cpp)
 add_executable(gazed_point_fixing_node  src/gazed_point_fixing_node.cpp)
+add_executable(viewpoint_control src/attention_control.cpp)
+add_executable(gaze_manager src/gaze_manager.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -103,6 +105,14 @@ target_link_libraries(omni_actionlib
   ${catkin_LIBRARIES}
 )
 target_link_libraries(gazed_point_fixing_node
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(viewpoint_control
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(gaze_manager
   ${catkin_LIBRARIES}
 )
 
